@@ -12,24 +12,17 @@ export default class MultiToggle extends Component {
 
     return (
       <View style={styles.container}>
-          <MultiToggleSwitch>
-            <MultiToggleSwitch.Item onPress={() => console.log("Facebook tapped!")}>
-                <Icon name={'facebook'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
-                />
-            </MultiToggleSwitch.Item>
-            <MultiToggleSwitch.Item>
-                <Icon name={'twitter'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
-                />
-            </MultiToggleSwitch.Item>
-            <MultiToggleSwitch.Item>
-                <Icon name={'instagram'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
-                />
-            </MultiToggleSwitch.Item>
-            <MultiToggleSwitch.Item>
-                <Icon name={'github'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
-                />
-            </MultiToggleSwitch.Item>
-          </MultiToggleSwitch>
+	    <MultiToggleSwitch>
+		  <MultiToggleSwitch.Item onPress={() => console.log("Facebook tapped!")}>
+              <Icon name={'facebook'} size={30} />
+          </MultiToggleSwitch.Item>
+		  <MultiToggleSwitch.Item primaryColor={'#CF4647'}>
+              <Icon name={'twitter'} size={30} />
+          </MultiToggleSwitch.Item>
+          <MultiToggleSwitch.Item primaryColor={'orange'}>
+              <Icon name={'github'} size={30} />
+          </MultiToggleSwitch.Item>
+		</MultiToggleSwitch>
       </View>
     );
   }
