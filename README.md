@@ -4,6 +4,7 @@ MultiToggle Switch for React-Native
 
 <img src="https://user-images.githubusercontent.com/7335120/31056186-631985f0-a6eb-11e7-9436-08cb48804036.gif" width="350">
 <img src="https://user-images.githubusercontent.com/7335120/31056187-6414462a-a6eb-11e7-93ef-7420275b33d6.gif" width="350">
+<img src="https://user-images.githubusercontent.com/7335120/31057446-499b8514-a700-11e7-86b8-1dd462f9eda4.gif" width="350">
 
 
 ### Installation
@@ -33,10 +34,22 @@ import MultiToggleSwitch from 'react-native-multi-toggle-switch';
 
 ```
 <MultiToggleSwitch>
-  <MultiToggleSwitch.Item iconName={'facebook'} onPress={() => console.log("Facebook tapped!")}/>
-  <MultiToggleSwitch.Item iconName={'twitter'}/>
-  <MultiToggleSwitch.Item iconName={'instagram'} />
-  <MultiToggleSwitch.Item iconName={'github'}/>
+  <MultiToggleSwitch.Item onPress={() => console.log("Facebook tapped!")}>
+      <Icon name={'facebook'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
+      />
+  </MultiToggleSwitch.Item>
+  <MultiToggleSwitch.Item>
+      <Icon name={'twitter'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
+      />
+  </MultiToggleSwitch.Item>
+  <MultiToggleSwitch.Item>
+      <Icon name={'instagram'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
+      />
+  </MultiToggleSwitch.Item>
+  <MultiToggleSwitch.Item>
+      <Icon name={'github'} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
+      />
+  </MultiToggleSwitch.Item>
 </MultiToggleSwitch>
 ```
 
@@ -59,4 +72,4 @@ import MultiToggleSwitch from 'react-native-multi-toggle-switch';
 ## TODO
 
 - [x] Example
-- [ ] Able to use all icons(only FontAwesome Supported)
+- [x] Able to use all icons(only FontAwesome Supported)

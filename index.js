@@ -33,12 +33,9 @@ export default class MultiToggleSwitch extends Component {
 				{toggleButtons.map((MultiToggleSwitch, idx) => (
 					<MultiToggleSwitchItem
 					    key={idx}
+                        {...this.props}
+                        {...MultiToggleSwitch.props}
 						active={ idx === this.state.activeIdx ? true : false}
-						primaryColor={MultiToggleSwitch.props.primaryColor}
-						secondaryColor={MultiToggleSwitch.props.secondaryColor}
-						iconName={MultiToggleSwitch.props.iconName}
-						itemContainer={MultiToggleSwitch.props.itemContainer}
-						activeContainerStyle={MultiToggleSwitch.props.activeContainerStyle}
 						onPress={() => {
 							this.setActiveIndex(idx)
 							MultiToggleSwitch.props.onPress()

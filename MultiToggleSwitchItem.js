@@ -5,7 +5,6 @@ import {
     Text,
 	TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types';
 
 
@@ -21,8 +20,7 @@ export default class MultiToggleSwitchItem extends Component {
 				style={[this.props.itemContainer ,this.props.active === true ? this.props.activeContainerStyle: undefined, this.props.active === true ? {backgroundColor: this.props.primaryColor}: undefined ]}
 				onPress={() => this.props.onPress()}
 			  >
-				  <Icon name={this.props.iconName} size={30} color={this.props.active ? this.props.secondaryColor : this.props.primaryColor}
-				  />
+                 {React.cloneElement(this.props.children, { color: this.props.active ? this.props.secondaryColor : this.props.primaryColor })}
 			  </TouchableOpacity>
 		)
     }
@@ -31,7 +29,6 @@ export default class MultiToggleSwitchItem extends Component {
 
 MultiToggleSwitchItem.defaultProps = {
 	active: false,
-	elevate: false,
 	iconName: undefined,
 	primaryColor: '#124E96',
 	secondaryColor: 'white',
@@ -40,7 +37,6 @@ MultiToggleSwitchItem.defaultProps = {
 
 MultiToggleSwitchItem.propTypes = {
 	active: PropTypes.bool,
-	elevate: PropTypes.bool,
 	iconName: PropTypes.string,
 	primaryColor: PropTypes.string,
 	secondaryColor: PropTypes.string,
