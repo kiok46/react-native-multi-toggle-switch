@@ -29,7 +29,7 @@ export default class MultiToggleSwitch extends Component {
 
 
 		return (
-			<View style={this.props.iconsContainer} pointerEvents={"box-none"}>
+			<View style={this.props.itemsContainer} pointerEvents={"box-none"}>
 				{toggleButtons.map((MultiToggleSwitch, idx) => (
 					<MultiToggleSwitchItem
 					    key={idx}
@@ -37,7 +37,7 @@ export default class MultiToggleSwitch extends Component {
 						primaryColor={MultiToggleSwitch.props.primaryColor}
 						secondaryColor={MultiToggleSwitch.props.secondaryColor}
 						iconName={MultiToggleSwitch.props.iconName}
-						iconContainer={MultiToggleSwitch.props.iconContainer}
+						itemContainer={MultiToggleSwitch.props.itemContainer}
 						activeContainerStyle={MultiToggleSwitch.props.activeContainerStyle}
 						onPress={() => {
 							this.setActiveIndex(idx)
@@ -53,7 +53,7 @@ export default class MultiToggleSwitch extends Component {
 	render(){
 		return(
 	          <View style={{backgroundColor: 'transparent', marginTop: 10}}>
-			  		<View style={[this.props.iconsContainerBackgroundStyle, {width: (50+15)*this.props.children.length}]}/>
+			  		<View style={[this.props.itemsContainerBackgroundStyle, {width: (50+15)*this.props.children.length}]}/>
 					{this.renderToggleItems()}
 	          </View>
 		)
@@ -67,7 +67,7 @@ MultiToggleSwitch.defaultProps = {
 	defaultActiveIndex: 0,
 	primaryColor: 'red',
 	secondaryColor: 'white',
-	iconContainer: {
+    itemContainer: {
 	  padding: 10,
 	  backgroundColor: 'white',
 	  marginLeft: 5,
@@ -79,17 +79,23 @@ MultiToggleSwitch.defaultProps = {
 	  borderRadius: 30,
 	},
 	activeContainerStyle: {
-	  backgroundColor: 'red',
 	  height: 80,
 	  width: 80,
-	  marginTop: -15,
-	  borderRadius: 40
+	  marginTop: -14,
+	  marginBottom: 2,
+	  borderRadius: 40,
+	  elevation: 7,
+      shadowOpacity: 0.0015 * 7 + 0.18,
+      shadowRadius: 0.54 * 7,
+      shadowOffset: {
+        height: 0.6 * 7,
+      },
 	},
-	iconsContainer: {
+	itemsContainer: {
 	  flexDirection: 'row',
 	  paddingTop: 15,
 	},
-	iconsContainerBackgroundStyle: {
+	itemsContainerBackgroundStyle: {
 		position: 'absolute',
 		height: 50,
 		marginTop: 15,
@@ -104,9 +110,9 @@ MultiToggleSwitch.propTypes = {
 	defaultActiveIndex: PropTypes.number,
 	primaryColor: PropTypes.string,
 	secondaryColor: PropTypes.string,
-	iconContainer: View.propTypes.style,
+	itemContainer: View.propTypes.style,
 	activeContainerStyle: View.propTypes.style,
-	iconsContainer: View.propTypes.style,
-	iconsContainerBackgroundStyle: View.propTypes.style,
+	itemsContainer: View.propTypes.style,
+	itemsContainerBackgroundStyle: View.propTypes.style,
 	onPress: PropTypes.func,
 }

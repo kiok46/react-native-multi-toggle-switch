@@ -41,6 +41,21 @@ import MultiToggleSwitch from 'react-native-multi-toggle-switch';
 ```
 
 
+## API
+
+
+| Property     | Type     | Default               | Description                                                                                                |
+|--------------|----------|-----------------------|------------------------------------------------------------------------------------------------------------|
+| defaultActiveIndex      | number    | 0                    | Item index which should be active when the component renders                                                         |
+| primaryColor  | string   | #124E96               | Color of icon when in non-active state & Color of icon background when in active state                                                                                 |
+| secondaryColor      | string  | white                  | Color of icon when in active state & Color of icon background when in non-active state                                                                                   |
+| itemContainer | style   | null | Style of item container                                                                             |
+| activeContainerStyle | style   | null | Style of item container when active                                                                            |
+| itemsContainer | style   | null | Style of container containing all items                                                                            |
+| itemsContainerBackgroundStyle | style   | null | Background Style of container containing items                                                                             |
+| onPress  | function |                       | Function to be called as soon as the user presses any item  |
+
+
 ## TODO
 
 - [x] Example
