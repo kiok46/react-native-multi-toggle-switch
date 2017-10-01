@@ -1,6 +1,6 @@
 {
   "name": "react-native-multi-toggle-switch",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Customizable Multi Toggle Switch Component for React-Native",
   "main": "index.js",
   "scripts": {
