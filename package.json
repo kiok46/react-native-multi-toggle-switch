@@ -1,0 +1,22 @@
+{
+  "name": "react-native-multi-toggle-switch",
+  "version": "0.9.0",
+  "description": "Customizable Multi Toggle Switch Component for React-Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiok46/react-native-multi-toggle-switch.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Kuldeep Singh (kiok46)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kiok46/react-native-multi-toggle-switch/issues"
+  },
+  "homepage": "https://github.com/kiok46/react-native-multi-toggle-switch#readme"
+}
