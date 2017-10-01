@@ -2,6 +2,10 @@
 MultiToggle Switch for React-Native
 
 
+<img src="https://user-images.githubusercontent.com/7335120/31056186-631985f0-a6eb-11e7-9436-08cb48804036.gif" width="350">
+<img src="https://user-images.githubusercontent.com/7335120/31056187-6414462a-a6eb-11e7-93ef-7420275b33d6.gif" width="350">
+
+
 ### Installation
 ```
 npm i react-native-multi-toggle-switch --save
