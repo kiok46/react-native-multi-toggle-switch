@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types';
-import MultiToggleItem from './MultiToggleItem';
+import MultiToggleSwitchItem from './MultiToggleSwitchItem';
 
 
-export default class MultiToggle extends Component {
+export default class MultiToggleSwitch extends Component {
     constructor(props) {
       super(props)
 	  this.state = {
@@ -30,18 +30,18 @@ export default class MultiToggle extends Component {
 
 		return (
 			<View style={this.props.iconsContainer} pointerEvents={"box-none"}>
-				{toggleButtons.map((MultiToggle, idx) => (
-					<MultiToggleItem
+				{toggleButtons.map((MultiToggleSwitch, idx) => (
+					<MultiToggleSwitchItem
 					    key={idx}
 						active={ idx === this.state.activeIdx ? true : false}
-						primaryColor={MultiToggle.props.primaryColor}
-						secondaryColor={MultiToggle.props.secondaryColor}
-						iconName={MultiToggle.props.iconName}
-						iconContainer={MultiToggle.props.iconContainer}
-						activeContainerStyle={MultiToggle.props.activeContainerStyle}
+						primaryColor={MultiToggleSwitch.props.primaryColor}
+						secondaryColor={MultiToggleSwitch.props.secondaryColor}
+						iconName={MultiToggleSwitch.props.iconName}
+						iconContainer={MultiToggleSwitch.props.iconContainer}
+						activeContainerStyle={MultiToggleSwitch.props.activeContainerStyle}
 						onPress={() => {
 							this.setActiveIndex(idx)
-							MultiToggle.props.onPress()
+							MultiToggleSwitch.props.onPress()
 						}}
 					/>
 				))}
@@ -61,9 +61,9 @@ export default class MultiToggle extends Component {
 }
 
 
-MultiToggle.Item = MultiToggleItem;
+MultiToggleSwitch.Item = MultiToggleSwitchItem;
 
-MultiToggle.defaultProps = {
+MultiToggleSwitch.defaultProps = {
 	defaultActiveIndex: 0,
 	primaryColor: 'red',
 	secondaryColor: 'white',
@@ -100,7 +100,7 @@ MultiToggle.defaultProps = {
 	onPress: () => {},
 }
 
-MultiToggle.propTypes = {
+MultiToggleSwitch.propTypes = {
 	defaultActiveIndex: PropTypes.number,
 	primaryColor: PropTypes.string,
 	secondaryColor: PropTypes.string,

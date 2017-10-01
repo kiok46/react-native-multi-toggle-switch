@@ -22,18 +22,18 @@ react-native link
 **First step:** import the component:
 
 ```
-import { MultiToggle } from 'react-native-multi-toggle-switch';
+import { MultiToggleSwitch } from 'react-native-multi-toggle-switch';
 ```
 
 **Second step:** Use it.
 
 ```
-<MultiToggle>
-  <MultiToggle.Item iconName={'facebook'} onPress={() => console.log("Facebook tapped!")}/>
-  <MultiToggle.Item iconName={'twitter'}/>
-  <MultiToggle.Item iconName={'instagram'} />
-  <MultiToggle.Item iconName={'github'}/>
-</MultiToggle>
+<MultiToggleSwitch>
+  <MultiToggleSwitch.Item iconName={'facebook'} onPress={() => console.log("Facebook tapped!")}/>
+  <MultiToggleSwitch.Item iconName={'twitter'}/>
+  <MultiToggleSwitch.Item iconName={'instagram'} />
+  <MultiToggleSwitch.Item iconName={'github'}/>
+</MultiToggleSwitch>
 ```
 
 

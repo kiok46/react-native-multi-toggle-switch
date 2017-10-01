@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import PropTypes from 'prop-types';
 
 
-export default class MultiToggleItem extends Component {
+export default class MultiToggleSwitchItem extends Component {
     constructor(props) {
       super(props)
     }
@@ -29,7 +29,7 @@ export default class MultiToggleItem extends Component {
 }
 
 
-MultiToggleItem.defaultProps = {
+MultiToggleSwitchItem.defaultProps = {
 	active: false,
 	elevate: false,
 	iconName: undefined,
@@ -63,7 +63,7 @@ MultiToggleItem.defaultProps = {
 	onPress: () => {},
 }
 
-MultiToggleItem.propTypes = {
+MultiToggleSwitchItem.propTypes = {
 	active: PropTypes.bool,
 	elevate: PropTypes.bool,
 	iconName: PropTypes.string,
