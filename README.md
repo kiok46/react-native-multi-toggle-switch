@@ -26,7 +26,7 @@ react-native link
 **First step:** import the component:
 
 ```
-import { MultiToggleSwitch } from 'react-native-multi-toggle-switch';
+import MultiToggleSwitch from 'react-native-multi-toggle-switch';
 ```
 
 **Second step:** Use it.
@@ -43,5 +43,5 @@ import { MultiToggleSwitch } from 'react-native-multi-toggle-switch';
 
 ## TODO
 
-- [ ] Example
+- [x] Example
 - [ ] Able to use all icons(only FontAwesome Supported)
